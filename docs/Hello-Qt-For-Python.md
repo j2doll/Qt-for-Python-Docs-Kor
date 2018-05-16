@@ -36,7 +36,7 @@ app.exec_()
 
 이를 실행하기 위해 간단한 python hello_world.py가 작업을 수행합니다.
 
-그게 전부는 아니지만, 진정한 질문은 다음과 같습니다: Qt 클래스(class)의 메소드(method)에 액세스하는 방법은 무엇인가?
+이때 진짜 질문은 다음과 같습니다: Qt 클래스(class)의 메소드(method)에 액세스하는 방법은 무엇인가?
 
 프로세스를 단순화하기 위해 Qt API를 유지합니다. 예를 들어, QLabel의 크기(size)를 지정하려면 C++에서 다음과 같이 됩니다.
 
@@ -46,7 +46,7 @@ label->setText("Hello World!");
 label->resize(800, 600);
 ```
 
-파이썬에서 Qt를 사용하는 방법은 다음과 같습니다:
+Python에서 Qt를 사용하는 방법은 다음과 같습니다:
 
 ```python
 label = QLabel()
