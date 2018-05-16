@@ -5,9 +5,9 @@
 
 ## 헬로우 큐트 포 파이썬 (Hello Qt for Python)
 
-원문 http://blog.qt.io/blog/2018/05/04/hello-qt-for-python/
+원문 [http://blog.qt.io/blog/2018/05/04/hello-qt-for-python/](http://blog.qt.io/blog/2018/05/04/hello-qt-for-python/)
 
-번역 
+번역 [https://j2doll.github.io/Qt-for-Python-Docs-Kor/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/)
 
 첫 번째 Qt for Python의 기술 프리뷰 릴리스가 여기 있습니다!
 
