@@ -1,8 +1,4 @@
 
-## 글
-
-[글 목록](README.md)
-
 ## 파이썬 상호 작용을 위한 QML과 Qt
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
@@ -123,3 +119,7 @@ Item {
 맞춤 유형이 표시됩니다.
 
 또한 마우스를 클릭하면 color 속성이 변경됩니다.
+
+## 글
+
+[글 목록](README.md)

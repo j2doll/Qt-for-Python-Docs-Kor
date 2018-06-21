@@ -1,8 +1,4 @@
 
-## 글
-
-[글 목록](README.md)
-
 ## 헬로우 큐트 포 파이썬 (Hello Qt for Python)
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
@@ -113,3 +109,7 @@ if __name__ == "__main__":
 결과적으로 버튼을 누를 때마다 Hello World가 임의의 언어로 표시됩니다!
 
 이 간단한 스크립트의 구조는 Qt for Python을 사용하는 대부분의 응용 프로그램의 기본이 될 것이므로, Qt for Python이 발표되자 마자 테스트해 보시기 바랍니다!
+
+## 글
+
+[글 목록](README.md)

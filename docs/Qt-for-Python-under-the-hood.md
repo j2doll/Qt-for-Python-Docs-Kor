@@ -1,8 +1,4 @@
 
-## 글
-
-[글 목록](README.md)
-
 ## 큐트 포 파이썬: 내부를 들여다 보기 (Qt for Python: under the hood)
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
@@ -38,3 +34,7 @@ Shiboken은 Qt 헤더(header)를 파싱하고 Clang을 사용하여 모든 Qt �
 이 프로세스의 결과는 CPython으로 작성된 래퍼(wrapper) 세트(set)입니다. 이 래퍼를 사용하면 Python2라는 Python 모듈을 쉽게 컴파일하고 제공할 수 있습니다.
 
 ApiExtractor 및 Shiboken과 관련된 공식 문서는 공식 Qt for Python 문서에 포함되어 개발에 참여할 수 있으며, Shiboken이 어떻게 작동하는지 궁금하다면 향후 블로그(blog.qt.io) 게시물을 계속 지켜봐 주십시오!
+
+## 글
+
+[글 목록](README.md)
