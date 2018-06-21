@@ -5,9 +5,11 @@
 
 ## 큐트 포 파이썬: 내부를 들여다 보기 (Qt for Python: under the hood)
 
-원문: [http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/](http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
 
-번역: [https://j2doll.github.io/Qt-for-Python-Docs-Kor/Qt-for-Python-under-the-hood/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/Qt-for-Python-under-the-hood/)
+- 원문: [http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/](http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/)
+
+- 번역: [https://j2doll.github.io/Qt-for-Python-Docs-Kor/Qt-for-Python-under-the-hood/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/Qt-for-Python-under-the-hood/)
 
 오늘 저는 "Qt for Python bindings" 생성 프로세스에 대해 말씀 드리고자 합니다.
 
@@ -31,7 +33,7 @@ Shiboken은 Qt 헤더(header)를 파싱하고 Clang을 사용하여 모든 Qt �
 또한 Shiboken은 획득된 정보를 수정하여 C++ 클래스를 Python 세계로 적절하게 표현하고 조작할 수 있는 Typesystem(XML 기반)을 보유하고 있습니다.
 
 이 Typesystem을 통해 메소드(method)를 제거하고 특정 클래스에 추가할 수 있으며 각 함수의 인수를 수정할 수도 있습니다.
-이는 데이터 구조나 유형을 적절히 처리하기 위한 C++ 및 Python 충돌과 의사 결정에 필수적입니다. 
+이는 데이터 구조나 유형을 적절히 처리하기 위한 C++ 및 Python 충돌과 의사 결정에 필수적입니다.
 
 이 프로세스의 결과는 CPython으로 작성된 래퍼(wrapper) 세트(set)입니다. 이 래퍼를 사용하면 Python2라는 Python 모듈을 쉽게 컴파일하고 제공할 수 있습니다.
 
