@@ -3,9 +3,9 @@
 
 [글 목록](README.md)
 
-## 파이썬 상호 작용을위한 QML과 Qt
+## 파이썬 상호 작용을 위한 QML과 Qt
 
-[원문](http://blog.qt.io/blog/2018/05/14/qml-qt-python/)
+- [원문](http://blog.qt.io/blog/2018/05/14/qml-qt-python/)
 
 데스크톱 애플리케이션용 QtWidgets 외에도 Qt에는 또 다른 UI 기술인 QML이 있습니다.
 
