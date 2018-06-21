@@ -1,7 +1,7 @@
 
 ## 글 목록
 
-![](qtforpython-underthehood.png)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/qtforpython-underthehood.png)
 
 [헬로우 큐트 포 파이썬 (Hello Qt for Python)](Hello-Qt-For-Python.md)
 
