@@ -10,7 +10,9 @@ We are glad to announce that finally the technical preview of Qt for Python is a
 
 과거 테크니컬 프리뷰에서 우리는 여전히 PyPi 인력들과 우리의 wheel(zip 형식의 패키지)들을 서버에 업로드 할 수 있도록 논의하고 있었지만, 이제는 모든 것이 순조롭게 진행되며, PySide2 모듈을 다음과 같이 간단히 얻을 수 있습니다.
 
+```sh
  pip install PySide2
+```
 
 우리는 서버에 스냅샷 휠(wheel)을 계속 업로드 할 것이며, 파이썬을 위한 Qt(Qt for Python)의 최신 기능을 얻을 수 있습니다.
 
