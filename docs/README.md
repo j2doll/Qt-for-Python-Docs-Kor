@@ -8,3 +8,6 @@
 [큐트 포 파이썬: 내부를 들여다 보기 (Qt for Python: under the hood)](Qt-for-Python-under-the-hood.md)
 
 [파이썬 상호 작용을 위한 QML과 Qt (QML and Qt for Python interaction)](QML-and-Qt-for-Python-interaction.md)
+
+[PyPi에서 Qt for Python 사용하기 (Qt for Python available at PyPi)](Qt-for-Python-available-at-PyPi.md)
+
