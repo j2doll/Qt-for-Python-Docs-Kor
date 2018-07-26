@@ -1,18 +1,20 @@
 ## 파이썬(Python)을 위한 큐트(Qt)가 당신에게 다가 옵니다! (Qt for Python is coming to a computer near you!)
 
-- 원문: [http://blog.qt.io/blog/2018/04/13/qt-for-python-is-coming-to-a-computer-near-you/](http://blog.qt.io/blog/2018/04/13/qt-for-python-is-coming-to-a-computer-near-you/)
+- 원문:   [http://blog.qt.io/blog/2018/04/13/qt-for-python-is-coming-to-a-computer-near-you/](http://blog.qt.io/blog/2018/04/13/qt-for-python-is-coming-to-a-computer-near-you/)
 
-- 번역: []()
+- 번역:  [https://j2doll.github.io/Qt-for-Python-Docs-Kor/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/)
 
 Qt는 훌륭한 C++ 프레임워크(framework)이므로 QML, Qt Quick Controls, Qt 위젯(widget)과 같은 기술로 멋진 사용자 인터페이스(User Interface)를 만들 수 있습니다.
+
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtLogo.png)
 
 저는 C++가 오늘날 세계에서 가장 널리 사용되는 프로그래밍 언어 중 하나라고 회자될 때, 아무도 그들의 양말을 벗기지 않는다고(영어식 농답입니다) 주장할 것이다.
 
 파이썬(Python)이 인기 급상승에서 가장 빠르게 성장하고 있는 프로그래밍 언어 중 하나라는 사실은 아마도 대부분의 커뮤니티에서도 오래된 소식일 것입니다.
 
-그런데, 이 블로그 글은 무엇에 관한 거죠?
+그런데, 이 블로그(blog.qt.io) 글은 무엇에 관한 거죠?
 
-음, 2분만 더 주십시오.
+음... 2분만 더 주십시오.
 
 C++와 Python은 모두 훌륭한 프로그래밍 언어이지만, 서로 다른 분야에서만 훌륭합니다.
 
@@ -58,6 +60,10 @@ Qt for Python는 Qt 5.11 릴리스 직후 기술 평가서로 발표될 예정�
 
 이를 위해 현재 많은 분들이 열심히 작업하고 계십니다.
 
- http://download.qt.io/snapshots/ci/pyside 에서 최신 스냅샷을 확인하시거나 지금 개발 프로젝트를 시작하려면 저희(Qt Company)에게 문의하십시오.
+ [http://download.qt.io/snapshots/ci/pyside](http://download.qt.io/snapshots/ci/pyside) 에서 최신 스냅샷을 확인하시거나 지금 개발 프로젝트를 시작하려면 저희(Qt Company)에게 문의하십시오.
 
 더 많은 블로그 게시물이 앞으로 몇 주일 후(현재 18년 4월)에 나올 예정이므로, 기술 측면과 기능에 대해 보다 자세한 내용을 확인하실 수 있을 겁니다.
+
+## 글
+
+[글 목록](README.md)
