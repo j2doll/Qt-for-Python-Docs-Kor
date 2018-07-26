@@ -2,7 +2,7 @@
 
 - 원문:  [http://blog.qt.io/blog/2018/07/17/qt-python-available-pypi/](http://blog.qt.io/blog/2018/07/17/qt-python-available-pypi/)
 
-- 번역:  [https://j2doll.github.io/Qt-for-Python-Docs-Kor/](https://j2doll.github.io/Qt-for-Python-available-at-PyPi/)
+- 번역:  [https://j2doll.github.io/Qt-for-Python-Docs-Kor/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/)
 
 We are glad to announce that finally the technical preview of Qt for Python is available at the Python Package Index (PyPI).
 
