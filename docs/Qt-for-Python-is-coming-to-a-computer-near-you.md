@@ -10,6 +10,9 @@ Qt는 훌륭한 C++ 프레임워크(framework)이므로 QML, Qt Quick Controls, 
 
 저는 C++가 오늘날 세계에서 가장 널리 사용되는 프로그래밍 언어 중 하나라고 회자될 때, 아무도 그들의 양말을 벗기지 않는다고(영어식 농답입니다) 주장할 것이다.
 
+
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/CppLogo.jpg)
+
 파이썬(Python)이 인기 급상승에서 가장 빠르게 성장하고 있는 프로그래밍 언어 중 하나라는 사실은 아마도 대부분의 커뮤니티에서도 오래된 소식일 것입니다.
 
 그런데, 이 블로그(blog.qt.io) 글은 무엇에 관한 거죠?
@@ -20,27 +23,29 @@ C++와 Python은 모두 훌륭한 프로그래밍 언어이지만, 서로 다른
 
 C++는 프로그래밍 우주의 스타-디스트로이어입니다.
 
-스타-디스트로이어
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/StarDestroyer.jpg)
 
 그것은 당신의 모든 문제를 파괴할 수 있거나, C++와 친숙하지 않다면 가장 큰 문제가 될 수도 있습니다.
 
 따라서 프로그래밍 언어인 Python의 밀레니엄 팔콘을 사용하는 것이 편리할 때도 있습니다.
 
-밀레니엄 팔콘
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/MillFalcon.jpg)
 
 그게 누구든, 공주님과 밀수업자들에 의해 쉽게 조작될 수 있으며, 당신을 알데란(레아 공주의 고향별)에서 야빈(데스스타가 있었던 행성계)까지 광속으로 보내줄 것 입니다.
 
-레아 오르가나 공주
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/Leia-Organa.jpg)
 
 스타-디스토리어어에서 전체 승무원을 데려가거나, 밀레니엄 팔콘에서 기습공격을 하든, 깔끔한 사용자 인터페이스를 원합니다.
 
 Qt는, 프로그래밍 우주의 알투디투로써 필요하며, 스타-디스트로이어와 밀레니엄 팔콘에 모두 연결할 수 있습니다.
 
-알투디투(R2-D2)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/R2D2.jpg)
 
 [역자: 저자가 영어 문화권이라서 이해하기 쉽도록 스타워즈 농담을 구사 중입니다. :-| 별로 재미없을 수도 있음. ]
 
 PySide2[Python에서 Qt로의 연결]는 이번 봄(2018년)에 환골탈태 합니다.
+
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/PySideLogo.png)
 
 파이썬 응용 프로그램에서 Qt 사용을 반영하기 위해 솔루션 레벨에서 파이썬용 큐트(Qt for Python)로 다시 브랜드화 했습니다.
 
