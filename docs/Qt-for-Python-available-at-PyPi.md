@@ -14,9 +14,10 @@ We are glad to announce that finally the technical preview of Qt for Python is a
  pip install PySide2
 ```
 
+> 번역 주석: 역자가 테스트해본 결과, Python3에서는 수행이 잘 되나, Python2에서는 지원이 잘 되지 않는 것 같습니다.
+
 우리는 서버에 스냅샷 휠(wheel)을 계속 업로드 할 것이며, 파이썬을 위한 Qt(Qt for Python)의 최신 기능을 얻을 수 있습니다.
 
 ## 글
 
 [글 목록](README.md)
-
