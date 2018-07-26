@@ -5,7 +5,7 @@
 
 - 원문: [http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/](http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/)
 
-- 번역: [https://j2doll.github.io/Qt-for-Python-Docs-Kor/Qt-for-Python-under-the-hood/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/Qt-for-Python-under-the-hood/)
+- 번역: [https://j2doll.github.io/Qt-for-Python-Docs-Kor/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/)
 
 오늘 저는 "Qt for Python bindings" 생성 프로세스에 대해 말씀 드리고자 합니다.
 
