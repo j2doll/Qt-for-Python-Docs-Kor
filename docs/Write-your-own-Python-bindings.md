@@ -21,19 +21,19 @@ Qt for Python에는 바인딩 생성 도구인 쉬보켄(Shiboken)도 포함되�
 
 ![](https://qt-blog-uploads.s3.amazonaws.com/wp-content/uploads/2018/05/icecream.png)
 
-For the purposes of this post, we will use a slightly nonsensical custom library called Universe. It provides two classes: Icecream and Truck.
+이 게시물의 목적을 위해 Universe 라는 약간 무의미한 커스텀 라이브러리를 사용하겠습니다. 그것은 두 종류의 클래스(class)를 제공하겠습니다 : '아이스크림(Icecream)'과 '트럭(Truck)'.
 
-Icecreams are characterized by a flavor. And Truck serves as a vehicle of Icecream distribution for kids in a neighborhood. Pretty simple.
+아이스크림은 풍미(flavor)가 특징입니다. 그리고 트럭은 이웃 아이들을 위한 아이스크림 판매 차량 역할을 합니다. 아주 간단합니다.
 
-We would like to use those classes inside Python though. A use case would be adding additional ice cream flavors or checking whether ice cream distribution was successful.
+파이썬 안에서 이 클래스들을 사용하고 싶습니다. 유스 케이스(use case)는 추가된 아이스크림 풍미를 추가하거나 아이스크림 유통이 성공했는지 여부를 확인하는 것입니다.
 
-In simple words, we want to provide Python bindings for Icecream and Truck, so that we can use them in a Python script of our own.
+간략히 얘기해서, 아이스크림과 트럭에 파이썬 바인딩(python binding)을 제공하여 나만의 파이썬 스크립트에서 사용할 수 있게 하려고 합니다.
 
-We will be omitting some content for brevity, but you can check the full source code inside the repository under pyside-setup/examples/samplebinding.
+간결성을 위해 일부 내용을 생략 하겠지만, pyside-setup/examples/samplebinding 에서 저장소 내의 전체 소스 코드를 확인할 수 있습니다.
 
 ## C++ 라이브러리
 
-First, let’s take a look at the Icecream header:
+먼저 Icecream 헤더를 살펴 보겠습니다.
 
 ```cpp
 class Icecream
@@ -49,7 +49,7 @@ private:
 };
 ```
 
-and the Truck header:
+다음은 Truck 헤더입니다:
 
 ```cpp
 class Truck {
@@ -80,6 +80,8 @@ private:
 
 Most of the API should be easy enough to understand, but we’ll summarize the important bits:
 
+대부분의 API는 이해하기 쉬워야하지만 중요한 점들을 요약해 보겠습니다.
+
 - Icecream is a polymorphic type and is intended to be overridden
 - getFlavor() will return the flavor depending on the actual derived type
 - Truck is a value type that contains owned pointers, hence the copy constructor and co.
@@ -87,9 +89,16 @@ Most of the API should be easy enough to understand, but we’ll summarize the i
 - The Truck’s arrival message can be customized using setArrivalMessage()
 - deliver() will tell us if the ice cream delivery was successful or not
 
-## Shiboken typesystem
+- Icecream은 폴리몰픽 타입(polymorphic type)이며 오버라이드(overridde) 할 수 있습니다.
+- getFlavor() 함수는 실제 파생된 유형(derived type)에 따라 flavor를 반환합니다.
+- 트럭은 소유 포인터를 포함하는 값 유형이므로, 복사 생성자 및 공동.
+- 트럭은 addIcecreamFlavor()를 통해 추가할 수 있는 소유 Icecream 객체의 벡터(vector)를 저장합니다.
+- 트럭 도착 메시지(arrival message)는 setArrivalMessage()를 사용하여 사용자 정의 할 수 있습니다.
+- deliver()는 아이스크림 전달이 성공했는지 여부를 알려줍니다.
 
-To inform shiboken of the APIs we want bindings for, we provide a header file that includes the types we are interested in:
+## 시보켄 타입시스템 (Shiboken typesystem)
+
+바인딩을 원하는 API를 shiboken에 알리기 위해 우리는 관심있는 타입(type)을 포함하는 헤더 파일을 제공합니다:
 
 ```cpp
 #ifndef BINDINGS_H
@@ -100,6 +109,8 @@ To inform shiboken of the APIs we want bindings for, we provide a header file th
 ```
 
 In addition, shiboken also requires an XML typesystem file that defines the relationship between C++ and Python types:
+
+또한 shiboken은 C++과 Python 타입 간의 관계를 정의하는 XML 타입시스템 파일을 필요로 합니다.
 
 ```xml
 <?xml version="1.0"?>
@@ -125,47 +136,87 @@ In addition, shiboken also requires an XML typesystem file that defines the rela
 
 The first important thing to notice is that we declare "bool" and "std::string" as primitive types.
 
+첫 번째로 주의해야 할 점은 "bool" 및 "std::string"을 기본 유형으로 선언한다는 것입니다.
 
 A few of the C++ methods use these as parameter / return types and thus shiboken needs to know about them. It can then generate relevant conversion code between C++ and Python.
+
+몇 가지 C++ 메소드(method)는 이것을 매개변수(parameter)/반환타입(return type)으로 사용하므로 shiboken은 이들에 대해 알아야 합니다. 그런 다음 C++과 Python 간에 적절한 변환 코드를 생성할 수 있습니다.
+
 Most C++ primitive types are handled by shiboken without requiring additional code.
+
+대부분의 C++의 기본 타입(primitive type)은 추가 코드없이 shiboken에 의해 처리됩니다.
 
 Next, we declare the two aforementioned classes. One of them as an “object-type” and the other as a “value-type”.
 
+다음으로 위에서 언급한 두 가지 클래스를 선언합니다. 그 중 하나는 "객체-유형(object-type)"이고 다른 하나는 "값-유형(value-type)" 입니다.
+
 The main difference is that object-types are passed around in generated code as pointers, whereas value-types are copied (value semantics).
 
-By specifying the names of the classes in the typesystem file, shiboken will automatically try to generate bindings for all methods declared in the classes, so there is no need
-to mention all the method names manually…
+주된 차이점은 생성된 코드에서 '객체-유형'이 포인터(pointer)로 전달되는 반면 '값-유형'은 복사된다는 것입니다 (value semantics).
+
+By specifying the names of the classes in the typesystem file, shiboken will automatically try to generate bindings for all methods declared in the classes, so there is no need to mention all the method names manually…
+
+타입시스템 파일에서 클래스의 이름을 지정하면 shiboken이 클래스에 선언된 모든 메소드에 대한 바인딩을 자동으로 생성하므로 모든 메소드 이름을 수동으로 언급할 필요가 없습니다.
 
 Unless you want to somehow modify the function. Which leads us to the next topic: ownership rules.
 
+어떻게든 기능을 수정하고 싶지 않다면. 그것은 우리를 다음 주제로 이끌 것입니다: 소유권 규칙(ownership rules).
+
 Shiboken can’t magically know who is responsible for freeing C++ objects allocated in Python code. It can guess, but it’s not always the correct guess.
-There can be many cases: Python should release the C++ memory when the ref count of the Python object becomes zero. Or Python should never delete the C++ object assuming that it will
-be deleted at some point inside the C++ library. Or maybe it’s parented to another object (like QWidgets).
+
+Shiboken은 마술처럼 파이썬 코드에 할당된 C++ 객체를 해제할 책임이 있는 누구에게 있는지 알 수 없습니다. 그것은 짐작할 수 있지만 항상 정확한 추측은 아닙니다.
+
+There can be many cases: Python should release the C++ memory when the ref count of the Python object becomes zero. Or Python should never delete the C++ object assuming that it will be deleted at some point inside the C++ library. Or maybe it’s parented to another object (like QWidgets).
+
+많은 케이스가 있을 수 있습니다. Python 객체의 참조 카운트가 0이 되면 Python은 C++ 메모리를 해제(release)해야 합니다. 또는 Python은 C++ 라이브러리 내부의 어떤 지점에서 삭제될 것이라는 가정 하에 C++ 객체를 절대로 삭제하면 안됩니다. 또는 QWidgets와 같은 다른 객체를 부모로 사용했을 수도 있습니다.
 
 In our case the clone() method is only called inside the C++ library, and we assume that the C++ code will take care of releasing the cloned object.
 
+우리의 경우 clone() 메서드는 C++ 라이브러리 내에서만 호출되며, C++ 코드가 복제된 객체를 릴리스할 것이라고 가정합니다.
+
 As for addIcecreamFlavor(), we know that a Truck owns an Icecream object, and will remove it once the Truck is destroyed. Thus again, the ownership is set to “c++.”
+
+addIcecreamFlavor()에 관해서는, 트럭이 Icecream 객체를 소유하고 있고, 트럭이 파괴되면 제거하겠다는 것을 알고 있습니다. 따라서 소유권은 "C++"로 다시 설정됩니다.
+
 If we didn’t specify the ownership rules, in this case, the C++ objects would be deleted when the corresponding Python names go out of scope.
 
-## Building
+소유권 규칙(ownership rule)을 지정하지 않으면, 이 경우 Python 이름이 범위를 벗어날 때 C++ 객체가 삭제됩니다.
+
+## 빌딩(Building)
 
 To build the Universe custom library and then generate bindings for it, we provide a well-documented, mostly generic CMakeLists.txt file, which you can reuse for your own libraries.
 
+Universe 커스텀 라이브러리를 작성한 다음 바인딩을 생성하기 위해 잘 정리된 대부분의 일반 CMakeLists.txt 파일을 제공합니다. 이 파일은 사용자 고유의 라이브러리에 다시 사용할 수 있습니다.
+
 It mostly boils down to calling “cmake .” to configure the project and then building with the tool chain of your choice (we recommend the ‘(N)Makefiles’ generator though).
 
+주로 "cmake."를 호출하여 프로젝트를 구성한 다음 원하는 도구 체인을 사용하여 빌드합니다 ( '(N)Makefiles' 제네레이터를 사용하는 것이 좋습니다).
+
 As a result of building the project, you end up with two shared libraries: libuniverse.(so/dylib/dll) and Universe.(so/pyd).
+
+프로젝트를 빌드한 결과 libuniverse(so/dylib/dll)와 Universe(so/pyd)의 두 공유 라이브러리가 생깁니다.
+
 The former is the custom C++ library, and the latter is the Python module that can be imported from a Python script.
 
-Of course there are also intermediate files created by shiboken (the .h / .cpp files generated for creating the Python bindings). Don’t worry about them unless you need to
-debug why something fails to compile or doesn’t behave as it should. You can submit us a bug report then!
+전자는 커스텀 C++ 라이브러리이고 후자는 Python 스크립트에서 가져올 수있는 Python 모듈입니다.
+
+Of course there are also intermediate files created by shiboken (the .h / .cpp files generated for creating the Python bindings). Don’t worry about them unless you need to debug why something fails to compile or doesn’t behave as it should. You can submit us a bug report then!
+
+물론 shiboken(파이썬 바인딩 생성을 위해 생성된 .h/.cpp 파일)에 의해 생성된 중간 파일도 있습니다. 왜 무언가가 컴파일에 실패했는지 또는 왜 그렇게 행동하지 않는지 디버깅할 필요가 없다면 걱정하지 마십시오. 버그 리포트를 보내 주시면 감사하겠습니다.
 
 More detailed build instructions and things to take care of (especially on Windows) can be found in the example README.md file.
 
+더 자세한 빌드 지침과 주의해야 할 사항(예: Windows)은 README.md 파일 예에서 찾을 수 있습니다.
+
 And finally, we get to the Python part.
 
-## Using the Python module
+마지막으로 파이썬 부분을 살펴 보겠습니다.
+
+## 파이썬 모듈 사용하기
 
 The following small script will use our Universe module, derive from Icecream, implement virtual methods, instantiate objects, and much more:
+
+다음의 작은 스크립트는 Universe 모듈을 사용하고, Icecream에서 파생되며, 가상 메서드(virtual method)를 구현하고, 객체(object)를 인스턴스화하는 등의 작업을 수행합니다.
 
 ```python
 from Universe import Icecream, Truck
@@ -228,18 +279,35 @@ if __name__ == '__main__':
 
 After importing the classes from our module, we create two derived Icecream types which have customized “flavours”.
 
+우리 모듈에서 클래스를 가져온 후에 우리는 "맛(flavours)"을 사용자 정의한 두 가지 Icecream 유형을 생성합니다.
+
 We then create a truck, add some regular flavored Icecreams to it, and the two special ones.
 
+그런 다음 트럭을 만들고 정기적으로 맛을 낸 아이스크림을 두 개 추가합니다.
+
 We try to deliver the ice cream.
+
+우리는 아이스크림을 배달하려고 합니다.
+
 If the delivery fails, we create a new truck with the old one’s flavors copied over, and a new *magical* flavor that will surely satisfy all customers.
+
+배달이 실패하면 이전의 맛을 복사 한 새로운 트럭과 모든 고객을 만족시킬 새로운 마법의 맛을 만듭니다.
 
 The script above succinctly shows usage of deriving from C++ types, overriding virtual methods, creating and destroying objects, etc.
 
+위의 스크립트는 C++ 타입에서 파생된 사용법, 오버라이딩(overriding)된 가상 메소드(virtual method), 객체 생성 및 파기 등을 간략하게 보여줍니다.
+
 As mentioned above, the full source and additional build instructions can be found in the project repository under pyside-setup/examples/samplebinding.
+
+위에서 언급했듯이 전체 소스 및 추가 빌드 지침은 pyside-setup/examples/samplebinding의 프로젝트 저장소에서 찾을 수 있습니다.
 
 We hope that this small introduction showed you the power of Shiboken, how we leverage it to create Qt for Python, and how you could too!
 
+이 작은 소개가 여러분에게 Shiboken의 힘과 파이썬을 위한 Qt를 만드는 방법, 그리고 어떻게 할 수 있었는지를 보여주기를 바랍니다.
+
 Happy binding!
+
+행복한 바인딩이 되기를!
 
 
 ## 글
