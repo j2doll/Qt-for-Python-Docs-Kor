@@ -12,3 +12,6 @@
 [파이썬 상호 작용을 위한 QML과 Qt (QML and Qt for Python interaction)](QML-and-Qt-for-Python-interaction.md)
 
 [PyPi에서 Qt for Python 사용하기 (Qt for Python available at PyPi)](Qt-for-Python-available-at-PyPi.md)
+
+- 문의: [https://github.com/j2doll/discussion/issues](https://github.com/j2doll/discussion/issues)
+- 번역 프로젝트에 참가를 원하시거나, 잘못된 번역을 보완하실 분은 이슈를 남겨 주세요.
