@@ -11,6 +11,8 @@
 
 [파이썬 상호 작용을 위한 QML과 Qt (QML and Qt for Python interaction)](QML-and-Qt-for-Python-interaction.md)
 
+[나만의 파이썬 바인딩 작성하기 (Write your own Python bindings)](Write-your-own-Python-bindings.md)
+
 [PyPi에서 Qt for Python 사용하기 (Qt for Python available at PyPi)](Qt-for-Python-available-at-PyPi.md)
 
 - 문의: [https://github.com/j2doll/discussion/issues](https://github.com/j2doll/discussion/issues)
