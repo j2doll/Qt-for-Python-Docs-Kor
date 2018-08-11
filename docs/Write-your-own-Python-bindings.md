@@ -78,13 +78,11 @@ private:
 };
 ```
 
-Most of the API should be easy enough to understand, but we’ll summarize the important bits:
-
 대부분의 API는 이해하기 쉬워야하지만 중요한 점들을 요약해 보겠습니다.
 
 - Icecream은 폴리몰픽 타입(polymorphic type)이며 오버라이드(overridde) 할 수 있습니다.
 - getFlavor()는 실제 파생된 타입(derived type)에 따라 flavor를 반환합니다.
-- 트럭은 자신의 포인터를 포함하는 값-타입(value type)입니다, 따라서 복사 생성자(copy constructor) 및 공동. [응? 원문이 조금 이상함]
+- 트럭은 자신의 포인터(pointer)를 포함하는 값-타입(value type)입니다, 따라서 복사 생성자(copy constructor) 및 공동. [응? 원문이 조금 이상함]
 - 트럭은 addIcecreamFlavor()를 통해 추가할 수 있는 자신의 Icecream 객체의 벡터(vector)를 저장합니다.
 - 트럭의 도착 메시지(arrival message)는 setArrivalMessage()를 사용하여 커스텀한 정의를 할 수 있습니다.
 - deliver()는 아이스크림 전달이 성공했는지 여부를 알려줍니다.
@@ -137,9 +135,9 @@ Most of the API should be easy enough to understand, but we’ll summarize the i
 
 타입시스템 파일에서 클래스의 이름을 지정하면, shiboken이 클래스에 선언된 모든 메소드에 대한 바인딩을 자동으로 생성하므로 모든 메소드 이름을 수동으로 언급할 필요가 없습니다...
 
-어떻게든 함수를 수정하고 싶지 않다면. 그점은 우리를 다음 주제로 이끌 것입니다: '소유권 규칙(ownership rules)'.
+어떻게든 기능을 수정하고 싶지 않다면. 그점은 우리를 다음 주제로 이끌 것입니다: '소유권 규칙(ownership rules)'.
 
-Shiboken은 마술처럼 파이썬 코드에 할당된 C++ 객체를 해제할 책임이 있는 누구에게 있는지 알 수 없습니다. 그것은 짐작할 수 있지만, 항상 정확한 추측은 아닙니다.
+Shiboken은 마술처럼 파이썬 코드에 할당된 C++ 객체를 해제할 책임이 있는 누구에게 있는지 알 수는 없습니다. 소유권을 추측할 수는 있지만, 항상 정확한 추측은 아닙니다.
 
 많은 케이스가 있을 수 있습니다. Python 객체의 참조 카운트(ref count)가 0이 되면 Python은 C++ 메모리를 해제(release)해야 합니다. 또는 Python은 C++ 라이브러리 내부의 어떤 지점에서 삭제될 것이라는 가정 하에, C++ 객체를 절대로 삭제하면 안됩니다. 또는 QWidgets와 같은 다른 객체를 부모(parent)로 사용했을 수도 있습니다.
 
