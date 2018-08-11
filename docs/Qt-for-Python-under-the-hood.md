@@ -1,7 +1,7 @@
 
 ## 큐트 포 파이썬: 내부를 들여다 보기 (Qt for Python: under the hood)
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/pysidelogo.png)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtForPython.png)
 
 - 원문: [http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/](http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/)
 
