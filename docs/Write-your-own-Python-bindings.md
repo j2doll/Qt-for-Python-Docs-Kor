@@ -21,7 +21,7 @@ Qt for Python에는 바인딩 생성 도구인 쉬보켄(Shiboken)도 포함되�
 
 ![](https://qt-blog-uploads.s3.amazonaws.com/wp-content/uploads/2018/05/icecream.png)
 
-이 게시물의 목적을 위해 Universe 라는 약간 무의미한 커스텀 라이브러리를 사용하겠습니다. 그리고 두 종류의 클래스(class)를 추가하겠습니다: '아이스크림(Icecream)'과 '트럭(Truck)'.
+이 게시물의 목적을 위해 Universe 라는 약간 무의미한 커스텀 라이브러리(customed library)를 사용하겠습니다. 그리고 두 종류의 클래스(class)를 추가하겠습니다: '아이스크림(Icecream)'과 '트럭(Truck)'.
 
 아이스크림은 풍미(flavor)가 특징입니다. 그리고 트럭은 이웃 아이들을 위한 아이스크림 판매 차량 역할을 합니다. 아주 간단합니다.
 
