@@ -1,7 +1,7 @@
 
 ## 글 목록
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
+![](image/pysidelogo.png)
 
 [파이썬(Python)을 위한 큐트(Qt)가 당신에게 다가 옵니다! (Qt for Python is coming to a computer near you!)](Qt-for-Python-is-coming-to-a-computer-near-you.md)
 
