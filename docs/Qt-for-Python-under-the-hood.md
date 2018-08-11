@@ -1,7 +1,7 @@
 
 ## 큐트 포 파이썬: 내부를 들여다 보기 (Qt for Python: under the hood)
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/pysidelogo.png)
 
 - 원문: [http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/](http://blog.qt.io/blog/2018/05/24/qt-for-python-under-the-hood/)
 
@@ -11,7 +11,7 @@
 
 다음 다이어그램은 The Qt Company가 PySide2 모듈을 제공하기 위해 사용하고있는 내부 프로세스의 가장 일반적인 상호 작용을 보여줍니다:
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/qtforpython-underthehood.png)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/qtforpython-underthehood.png)
 
 PySide 프로젝트가 2009 년에 시작되었을 때 팀은 외부 도구를 사용하여 Qt C++ 헤더(header)에서 Python 바인딩(binding)을 생성하기로 결정했습니다.
 

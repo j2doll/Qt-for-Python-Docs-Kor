@@ -1,7 +1,7 @@
 
 ## 헬로우 큐트 포 파이썬 (Hello Qt for Python)
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtForPython.png)
 
 - 원문:  [http://blog.qt.io/blog/2018/05/04/hello-qt-for-python/](http://blog.qt.io/blog/2018/05/04/hello-qt-for-python/)
 

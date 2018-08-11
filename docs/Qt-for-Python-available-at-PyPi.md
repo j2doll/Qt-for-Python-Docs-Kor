@@ -1,4 +1,7 @@
+
 ## PyPi에서 Qt for Python 사용하기 (Qt for Python available at PyPi)
+
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtForPython.png)
 
 - 원문:  [http://blog.qt.io/blog/2018/07/17/qt-python-available-pypi/](http://blog.qt.io/blog/2018/07/17/qt-python-available-pypi/)
 

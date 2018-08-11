@@ -1,7 +1,7 @@
 
 ## 파이썬 상호 작용을 위한 QML과 Qt
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/pysidelogo.png)
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtForPython.png)
 
 - 원문:  [http://blog.qt.io/blog/2018/05/14/qml-qt-python/](http://blog.qt.io/blog/2018/05/14/qml-qt-python/)
 

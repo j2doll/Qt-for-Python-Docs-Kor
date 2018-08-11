@@ -1,6 +1,8 @@
 
 ## 나만의 파이썬 바인딩 작성하기 (Write your own Python bindings)
 
+![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtForPython.png)
+
 - 원문:   [http://blog.qt.io/blog/2018/05/31/write-python-bindings/](http://blog.qt.io/blog/2018/05/31/write-python-bindings/)
 
 - 번역:  [https://j2doll.github.io/Qt-for-Python-Docs-Kor/](https://j2doll.github.io/Qt-for-Python-Docs-Kor/)
