@@ -8,7 +8,7 @@ Qt는 훌륭한 C++ 프레임워크(framework)이므로 QML, Qt Quick Controls, 
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/QtLogo.png)
 
-저는 C++가 오늘날 세계에서 가장 널리 사용되는 프로그래밍 언어 중 하나라고 회자될 때, 아무도 그들의 양말을 벗기지 않는다고(영어식 농답입니다) 주장할 것이다.
+저는 C++가 오늘날 세계에서 가장 널리 사용되는 프로그래밍 언어 중 하나라고 회자될 때, 아무도 그들의 양말을 벗기지 않는다고(아메리칸 죠크) 주장할 것이다.
 
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/CppLogo.jpg)
