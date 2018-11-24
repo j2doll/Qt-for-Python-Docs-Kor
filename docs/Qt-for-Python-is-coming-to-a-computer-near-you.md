@@ -1,4 +1,4 @@
-## 파이썬(Python)을 위한 큐트(Qt)가 당신에게 다가 옵니다! (Qt for Python is coming to a computer near you!)
+## 파이썬(Python)을 위한 큐트(Qt)가 당신에게 다가옵니다! (Qt for Python is coming to a computer near you!)
 
 - 원문:   [http://blog.qt.io/blog/2018/04/13/qt-for-python-is-coming-to-a-computer-near-you/](http://blog.qt.io/blog/2018/04/13/qt-for-python-is-coming-to-a-computer-near-you/)
 
@@ -23,15 +23,15 @@ C++와 Python은 모두 훌륭한 프로그래밍 언어이지만, 서로 다른
 
 C++는 프로그래밍 우주의 스타-디스트로이어(제국군의 우주선)입니다.
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/StarDestroyer.jpg)
+![스타-디스트로이어](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/StarDestroyer.jpg)
 
-그것은 당신의 모든 문제를 파괴할 수 있거나, C++와 친숙하지 않다면 가장 큰 문제가 될 수도 있습니다.
+C++는 당신의 모든 문제를 파괴할 수도 있으며, C++와 친숙하지 않다면 가장 큰 문제가 될 수도 있습니다.
 
-따라서 프로그래밍 언어인 파이썬(Python)이라는 밀레니엄 팔콘(한 솔로의 우주선)을 사용하는 것이 편리할 때도 있습니다.
+따라서 프로그래밍 언어인 파이썬(Python)이라는 밀레니엄 팔콘(한-솔로의 우주선)을 사용하는 것이 편리할 때도 있습니다.
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/MillFalcon.jpg)
 
-그게 누구든, 공주님과 밀수업자들에 의해 쉽게 조작될 수 있으며, 당신을 알데란(레아 공주의 고향별)에서 야빈(데스스타가 있었던 행성계)까지 광속으로 보내줄 것 입니다.
+그게 누구든, 공주님이나 밀수업자들에 의해서도, 쉽게 조작될 수 있으며, 당신을 알데란(레아 공주의 고향별)에서 야빈(데스스타가 있었던 행성계)까지 광속으로 보내줄 것 입니다.
 
 ![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/Leia-Organa.jpg)
 
@@ -39,7 +39,7 @@ C++는 프로그래밍 우주의 스타-디스트로이어(제국군의 우주�
 
 Qt는, 프로그래밍 우주의 알투디투(R2D2)로써 필요하며, 스타-디스트로이어와 밀레니엄 팔콘에 모두 연결할 수 있습니다.
 
-![](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/R2D2.jpg)
+![R2D2](https://j2doll.github.io/Qt-for-Python-Docs-Kor/image/R2D2.jpg)
 
 >번역 주석: 저자가 영어 문화권이라서 이해하기 쉽도록 스타워즈 농담을 구사 중입니다. 별로 재미없을 수도 있음.
 
